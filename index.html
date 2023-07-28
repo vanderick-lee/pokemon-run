@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <title>Dino Game</title>
+  <link rel="stylesheet" href="css/main-style.css">
+
+  <!-- Google Analytics (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BGYVEBECY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-6BGYVEBECY');
+  </script>
+
+</head>
+
+<body>
+  <div class="main-container">
+    <!-- HEADER -->
+    <div class="header-container">
+      <!-- LOGO -->
+      <div class="logo-wrap sub-header-wrap">
+        <div class="phygital-logo">
+          <img src="assetsv2/logo.png" id="logo" alt="Root Rotation Logo" width="50vw">
+        </div>
+        <div class="phygital-text">
+          <img src="assetsv2/logo-text.png" alt="logo text" id="logo-text-img" width="250vw">
+        </div>
+      </div>
+      <!-- AI Avatar -->
+      <div class="did-wrap sub-header-wrap">
+        <video id="did-vid" src="assetsv2/demo-8bit-did.mp4" width="250vw" autoplay></video>
+        <img id="meow" src="assetsv2/player.gif" alt="meow">
+      </div>
+      <!-- Header Sub Text -->
+      <div class="headtext-wrap sub-header-wrap">
+        <img id="sub-header-img" src="assetsv2/Asset 85.png" alt="slogan rr" width="210vw">
+      </div>
+    </div>
+  </div>
+
+  <!-- PROGRESS BAR -->
+  <div class="progress-container" style="display: none;">
+    <div id="myProgress">
+      <div id="myBar">
+        <hr class="completed-bar__dashed" id="dashed">
+        <i class="fas fa-truck-moving completed-bar__truck" id="truck"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- GAME DINO -->
+  <canvas id="game"></canvas>
+
+  <!-- REWARD SECTION -->
+  <div class="reward-wrap">
+    <!-- Title -->
+    <div class="reward-title">
+      <img class="reward-text" src="assetsv2/reward.png" alt="reward">
+    </div>
+    <!-- Reward Wrap -->
+    <div class="reward-list">
+      <!-- First -->
+      <div class="prize prize-left" id="prize-1">
+        <img class="prize-img" src="assetsv2/prize-1.png" alt="Prize 1">
+      </div>
+      <!-- Second -->
+      <div class="prize prize-right" id="prize-2">
+        <img class="prize-img" src="assetsv2/prize-2.png" alt="Prize 2">
+      </div>
+      <!-- Third -->
+      <div class="prize prize-left" id="prize-3">
+        <img class="prize-img" src="assetsv2/prize-3.png" alt="Prize 3">
+      </div>
+      <!-- Fourth -->
+      <div class="prize prize-right" id="prize-4">
+        <img class="prize-img" src="assetsv2/prize-4.png" alt="Prize 4">
+      </div>
+      <!-- Fifth -->
+      <div class="prize prize-center" id="prize-5">
+        <img class="prize-img-center" src="assetsv2/prize-5.png" alt="Prize 5">
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer-wrap">
+    <img src="assetsv2/footer.png" alt="footer" width="300vh">
+  </div>
+
+  <!-- MODAL PRIZE -->
+  <!-- Level 1 -->
+  <div id="modal-1" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="assetsv2/prize-1-modal.png" alt="Prize 1" width="50%">
+      </div>
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeb-DKNrF1k-YT7P_CuTSnv_rinnjmQGkxoKMfU0u10G8cqwA/formResponse"
+        method="post">
+        <!-- Name input -->
+        <div class="form-element form-name-wrap">
+          <label for="form-name-1">Tên</label>
+          <input id="form-name-1" type="text" name="entry.191716070">
+        </div>
+        <!-- Phone input -->
+        <div class="form-element form-phone-wrap">
+          <label for="form-phone-1">Số điện thoại</label>
+          <input id="form-phone-1" type="text" name="entry.2080986284" required>
+        </div>
+        <!-- Email input -->
+        <div class="form-element form-email-wrap">
+          <label for="form-email-1">Email</label>
+          <input id="form-email-1" type="text" name="entry.1852443928">
+        </div>
+        <div class="form-btn-wrap">
+          <button class="submit-btn" type="submit">Nhận quà</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Level 2 -->
+  <div id="modal-2" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="assetsv2/prize-2-modal.png" alt="Prize 1" width="50%">
+      </div>
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdi_Gpsc3HwmAN8VHOYghjlZLFtyYAxBZuKU3G_ycT2LGY6pw/formResponse"
+        method="post">
+        <!-- Name input -->
+        <div class="form-element form-name-wrap">
+          <label for="form-name-2">Tên của bạn</label>
+          <input id="form-name-2" type="text" name="entry.191716070">
+        </div>
+        <!-- Phone input -->
+        <div class="form-element form-phone-wrap">
+          <label for="form-phone-2">Số điện thoại</label>
+          <input id="form-phone-2" type="text" name="entry.2080986284" required>
+        </div>
+        <!-- Email input -->
+        <div class="form-element form-email-wrap">
+          <label for="form-email-2">Email</label>
+          <input id="form-email-2" type="text" name="entry.1852443928">
+        </div>
+        <div class="form-btn-wrap">
+          <button class="submit-btn" type="submit">Nhận quà</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Level 3 -->
+  <div id="modal-3" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="assetsv2/prize-3-modal.png" alt="Prize 1" width="50%">
+      </div>
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfre6OVAKqz-z8JTdhcqsECCY_SsDS7KwolUrbte3VEVn_nMQ/formResponse"
+        method="post">
+        <!-- Name input -->
+        <div class="form-element form-name-wrap">
+          <label for="form-name-3">Tên của bạn</label>
+          <input id="form-name-3" type="text" name="entry.191716070">
+        </div>
+        <!-- Phone input -->
+        <div class="form-element form-phone-wrap">
+          <label for="form-phone-3">Số điện thoại</label>
+          <input id="form-phone-3" type="text" name="entry.2080986284" required>
+        </div>
+        <!-- Email input -->
+        <div class="form-element form-email-wrap">
+          <label for="form-email-3">Email</label>
+          <input id="form-email-3" type="text" name="entry.1852443928">
+        </div>
+        <div class="form-btn-wrap">
+          <button class="submit-btn" type="submit">Nhận quà</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Level 4 -->
+  <div id="modal-4" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="assetsv2/prize-4-modal.png" alt="Prize 1" width="50%">
+      </div>
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeiHxxEcgXfwjI7du8qr79NCw4XOoMziXkb5jA5UVySpbEaUQ/formResponse"
+        method="post">
+        <!-- Name input -->
+        <div class="form-element form-name-wrap">
+          <label for="form-name-4">Tên của bạn</label>
+          <input id="form-name-4" type="text" name="entry.191716070">
+        </div>
+        <!-- Phone input -->
+        <div class="form-element form-phone-wrap">
+          <label for="form-phone-4">Số điện thoại</label>
+          <input id="form-phone-4" type="text" name="entry.2080986284" required>
+        </div>
+        <!-- Email input -->
+        <div class="form-element form-email-wrap">
+          <label for="form-email-4">Email</label>
+          <input id="form-email-4" type="text" name="entry.1852443928">
+        </div>
+        <div class="form-btn-wrap">
+          <button class="submit-btn" type="submit">Nhận quà</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Level 5 -->
+  <div id="modal-5" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <img src="assetsv2/prize-5-modal.png" alt="Prize 1" width="50%">
+      </div>
+      <form
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdkEHbIYkXN8CrS3gZ9mW3p_dUFjA8JsGIykim9cBm01ZAy8A/formResponse"
+        method="post">
+        <!-- Name input -->
+        <div class="form-element form-name-wrap">
+          <label for="form-name-5">Tên của bạn</label>
+          <input id="form-name-5" type="text" name="entry.191716070">
+        </div>
+        <!-- Phone input -->
+        <div class="form-element form-phone-wrap">
+          <label for="form-phone-5">Số điện thoại</label>
+          <input id="form-phone-5" type="text" name="entry.2080986284" required>
+        </div>
+        <!-- Email input -->
+        <div class="form-element form-email-wrap">
+          <label for="form-email-5">Email</label>
+          <input id="form-email-5" type="text" name="entry.1852443928">
+        </div>
+        <div class="form-btn-wrap">
+          <button class="submit-btn" type="submit">Nhận quà</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- CUSTOM SCRIPTS -->
+  <script src="js/form-handle.js" defer type="module"></script>
+  <script src="js/index.js" defer type="module"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script>
+    setTimeout(function () {
+      $('#did-vid').fadeOut('fast');
+      $('#meow').fadeIn('fast');
+    }, 13000); // <-- time in milliseconds
+
+    setTimeout(function () {
+      $('#meow').fadeIn('fast');
+    }, 15000); // <-- time in milliseconds
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,241 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    touch-action: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+canvas {
+    border-top: 3px solid gray;
+}
+
+a {
+    color: rgb(161, 157, 157);
+}
+
+.links {
+    margin-bottom: 20px;
+    font-weight: normal;
+    font-size: 1.2em;
+}
+
+.separator {
+    color: grey;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+/* RR MAIN LOGO */
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5vw 0;
+    background: url('../assetsv2/bg-header.png') no-repeat center;
+    background-size: contain;
+}
+
+.sub-header-wrap {
+    max-width: 33%;
+}
+
+/* LEFT */
+.logo-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CENTER */
+#meow {
+    display: none;
+}
+
+/* REWARD SECTION */
+.reward-wrap {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw;
+    justify-content: center;
+    align-items: center;
+    background: url('../assetsv2/bg-reward.png') no-repeat center;
+    background-size: contain;
+}
+
+.reward-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.prize {
+    width: 50%;
+}
+
+.prize-left {
+    text-align: left;
+}
+
+.prize-right {
+    text-align: right;
+}
+
+.prize-center {
+    text-align: center;
+}
+
+.reward-text {
+    width: 25vw;
+}
+
+.prize-img {
+    width: 80%;
+}
+
+.prize-img-center {
+    width: 50%;
+}
+
+p {
+    font-family: "Poppins", "Helvetica", "sans-serif";
+    letter-spacing: 1px;
+    line-height: 1.5;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1rem;
+    color: rgba(48, 48, 48, 0.6);
+}
+
+/* RESPONSIVE */
+@media only screen and (max-width: 753px) {
+    .reward-text {
+        width: 25vw;
+    }
+
+    .prize-img {
+        width: 90%;
+    }
+
+    .prize-img-center {
+        width: 70%;
+    }
+
+    #logo-text-img {
+        width: 25vw;
+    }
+
+    #did-vid {
+        width: 20vw;
+    }
+
+    #sub-header-img {
+        width: 25vw;
+    }
+
+    #logo {
+        width: 10vw;
+    }
+
+    .modal-content {
+        width: 30vh;
+    }
+}
+
+/* FOOTER */
+.footer-wrap {
+    text-align: center;
+    margin-top: 17px;
+}
+
+/* The Modal */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Header */
+.modal-header {
+    width: 100%;
+    text-align: center;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #faaf1ac4;
+    border-radius: 7px;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #d4ff00;
+    width: 45vh;
+    /* Could be more or less, depending on screen size */
+}
+
+/* FORM */
+.form-element {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form-element > label {
+    font-size: 2vh;
+}
+
+.form-element > input {
+    padding: 2px 5px;
+}
+
+.form-btn-wrap {
+    width: 100%;
+    text-align: center;
+    margin-top: 14px;
+}
+
+.submit-btn {
+    padding: 5px 20px;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+}
