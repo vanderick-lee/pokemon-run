@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body onload="setupVideo()">
   <div class="main-container">
     <!-- HEADER -->
     <div class="header-container">
@@ -260,7 +260,7 @@
   <script src="js/form-handle.js" defer type="module"></script>
   <script src="js/index.js" defer type="module"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script>
+  <!-- <script>
     setTimeout(function () {
       $('#did-vid').fadeOut('fast');
       $('#meow').fadeIn('fast');
@@ -269,6 +269,22 @@
     setTimeout(function () {
       $('#meow').fadeIn('fast');
     }, 15000); // <-- time in milliseconds
+  </script> -->
+  <!-- Auto play then end video -->
+  <script>
+    function setupVideo() {
+      // get video
+      var video = document.getElementById("did-vid");
+      // Play the video, this is optional
+      video.play();
+      // Add a listener to this video, so that when the video ends, the video is "hidden".
+      video.addEventListener("ended", function () {
+        var meow = document.getElementById("meow")
+        // hide video
+        video.style.display = "none";
+        meow.style.display = "block";
+      })
+    }
   </script>
 </body>
 
