@@ -22,6 +22,11 @@
 </head>
 
 <body onload="setupVideo()">
+  <!-- START OVERLAY -->
+  <div id="start-overlay">
+    <img id="play-btn" src="assetsv2/play-btn.png" alt="play">
+  </div>
+
   <div class="main-container">
     <!-- HEADER -->
     <div class="header-container">
@@ -36,7 +41,7 @@
       </div>
       <!-- AI Avatar -->
       <div class="did-wrap sub-header-wrap">
-        <video id="did-vid" src="assetsv2/demo-8bit-did.mp4" width="250vw" autoplay></video>
+        <video id="did-vid" src="assetsv2/demo-8bit-did.mp4" width="250vw"></video>
         <img id="meow" src="assetsv2/player.gif" alt="meow">
       </div>
       <!-- Header Sub Text -->
@@ -273,6 +278,12 @@
   <!-- Auto play then end video -->
   <script>
     function setupVideo() {
+      document.getElementById("play-btn").onclick = function () {
+        document.getElementById("did-vid").play();
+        var startOverlay = document.getElementById("start-overlay");
+        startOverlay.style.display = "none";
+      };
+
       // get video
       var video = document.getElementById("did-vid");
       // Play the video, this is optional
