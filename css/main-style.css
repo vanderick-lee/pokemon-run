@@ -8,13 +8,12 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     user-select: none;
     touch-action: none;
+    outline: none;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none;
-    outline: none;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
 }
 
@@ -37,6 +36,21 @@ a {
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap");
+
+/* PLAY OVERLAY */
+#start-overlay {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 166, 0, 0.689);
+}
+
+#play-btn {
+    width: 20vh;
+}
 
 /* RR MAIN LOGO */
 .header-container {
