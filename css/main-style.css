@@ -79,6 +79,12 @@ a {
     display: none;
 }
 
+.did-wrap {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+}
+
 /* REWARD SECTION */
 .reward-wrap {
     width: 100%;
@@ -177,12 +183,24 @@ p {
     .modal-content {
         width: 30vh;
     }
+
+    .did-wrap {
+        height: 16vh;
+    }
+
+    .footer-img {
+        width: 10vh;
+    }
 }
 
 /* FOOTER */
 .footer-wrap {
     text-align: center;
     margin-top: 17px;
+}
+
+.footer-img {
+    width: 30vh;
 }
 
 /* The Modal */

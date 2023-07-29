@@ -59,13 +59,13 @@ export default class Player {
   };
 
   keydown = (event) => {
-    if (event.keyCode == 87) {
+    if (event.keyCode == 87 || event.keyCode == 13 || event.keyCode == 38) {
       this.jumpPressed = true;
     }
   };
 
   keyup = (event) => {
-    if (event.keyCode == 87) {
+    if (event.keyCode == 87 || event.keyCode == 13 || event.keyCode == 38) {
       this.jumpPressed = false;
     }
   };
