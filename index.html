@@ -8,6 +8,9 @@
   <link rel="icon" type="image/x-icon" href="favicon.png">
   <title>Dino Game</title>
   <link rel="stylesheet" href="css/main-style.css">
+  <!-- JQuery -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
   <!-- Google Analytics (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BGYVEBECY"></script>
@@ -21,7 +24,7 @@
 
 </head>
 
-<body onload="setupVideo()">
+<body onload="setupVideo(); form1()">
   <!-- START OVERLAY -->
   <div id="start-overlay">
     <img id="play-btn" src="assetsv2/play-btn.png" alt="play">
@@ -108,26 +111,24 @@
       <div class="modal-header">
         <img src="assetsv2/prize-1-modal.png" alt="Prize 1" width="50%">
       </div>
-      <form
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeb-DKNrF1k-YT7P_CuTSnv_rinnjmQGkxoKMfU0u10G8cqwA/formResponse"
-        method="post">
+      <form id="form-1" method="POST">
         <!-- Name input -->
         <div class="form-element form-name-wrap">
-          <label for="form-name-1">Tên</label>
-          <input id="form-name-1" type="text" name="entry.191716070">
+          <label for="form-name-2">Tên</label>
+          <input id="form-name-2" type="text" name="name">
         </div>
         <!-- Phone input -->
         <div class="form-element form-phone-wrap">
-          <label for="form-phone-1">Số điện thoại</label>
-          <input id="form-phone-1" type="text" name="entry.2080986284" required>
+          <label for="form-phone-2">Số điện thoại</label>
+          <input id="form-phone-2" type="tel" name="phone" required>
         </div>
         <!-- Email input -->
         <div class="form-element form-email-wrap">
-          <label for="form-email-1">Email</label>
-          <input id="form-email-1" type="text" name="entry.1852443928">
+          <label for="form-email-2">Email</label>
+          <input id="form-email-2" type="email" name="email">
         </div>
         <div class="form-btn-wrap">
-          <button class="submit-btn" type="submit">Nhận quà</button>
+          <button id="submit-form-1" class="submit-btn" type="submit">Nhận quà</button>
         </div>
       </form>
     </div>
@@ -138,28 +139,26 @@
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
-        <img src="assetsv2/prize-2-modal.png" alt="Prize 1" width="50%">
+        <img src="assetsv2/prize-2-modal.png" alt="Prize 2" width="50%">
       </div>
-      <form
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdi_Gpsc3HwmAN8VHOYghjlZLFtyYAxBZuKU3G_ycT2LGY6pw/formResponse"
-        method="post">
+      <form id="form-2" method="POST">
         <!-- Name input -->
         <div class="form-element form-name-wrap">
-          <label for="form-name-2">Tên của bạn</label>
-          <input id="form-name-2" type="text" name="entry.191716070">
+          <label for="form-name-2">Tên</label>
+          <input id="form-name-2" type="text" name="name">
         </div>
         <!-- Phone input -->
         <div class="form-element form-phone-wrap">
           <label for="form-phone-2">Số điện thoại</label>
-          <input id="form-phone-2" type="text" name="entry.2080986284" required>
+          <input id="form-phone-2" type="tel" name="phone" required>
         </div>
         <!-- Email input -->
         <div class="form-element form-email-wrap">
           <label for="form-email-2">Email</label>
-          <input id="form-email-2" type="text" name="entry.1852443928">
+          <input id="form-email-2" type="email" name="email">
         </div>
         <div class="form-btn-wrap">
-          <button class="submit-btn" type="submit">Nhận quà</button>
+          <button id="submit-form-2" class="submit-btn" type="submit">Nhận quà</button>
         </div>
       </form>
     </div>
@@ -170,28 +169,26 @@
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
-        <img src="assetsv2/prize-3-modal.png" alt="Prize 1" width="50%">
+        <img src="assetsv2/prize-3-modal.png" alt="Prize 3" width="50%">
       </div>
-      <form
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfre6OVAKqz-z8JTdhcqsECCY_SsDS7KwolUrbte3VEVn_nMQ/formResponse"
-        method="post">
+      <form id="form-3" method="POST">
         <!-- Name input -->
         <div class="form-element form-name-wrap">
-          <label for="form-name-3">Tên của bạn</label>
-          <input id="form-name-3" type="text" name="entry.191716070">
+          <label for="form-name-3">Tên</label>
+          <input id="form-name-3" type="text" name="name">
         </div>
         <!-- Phone input -->
         <div class="form-element form-phone-wrap">
           <label for="form-phone-3">Số điện thoại</label>
-          <input id="form-phone-3" type="text" name="entry.2080986284" required>
+          <input id="form-phone-3" type="tel" name="phone" required>
         </div>
         <!-- Email input -->
         <div class="form-element form-email-wrap">
           <label for="form-email-3">Email</label>
-          <input id="form-email-3" type="text" name="entry.1852443928">
+          <input id="form-email-3" type="email" name="email">
         </div>
         <div class="form-btn-wrap">
-          <button class="submit-btn" type="submit">Nhận quà</button>
+          <button id="submit-form-3" class="submit-btn" type="submit">Nhận quà</button>
         </div>
       </form>
     </div>
@@ -202,28 +199,26 @@
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
-        <img src="assetsv2/prize-4-modal.png" alt="Prize 1" width="50%">
+        <img src="assetsv2/prize-4-modal.png" alt="Prize 4" width="50%">
       </div>
-      <form
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeiHxxEcgXfwjI7du8qr79NCw4XOoMziXkb5jA5UVySpbEaUQ/formResponse"
-        method="post">
+      <form id="form-4" method="POST">
         <!-- Name input -->
         <div class="form-element form-name-wrap">
-          <label for="form-name-4">Tên của bạn</label>
-          <input id="form-name-4" type="text" name="entry.191716070">
+          <label for="form-name-4">Tên</label>
+          <input id="form-name-4" type="text" name="name">
         </div>
         <!-- Phone input -->
         <div class="form-element form-phone-wrap">
           <label for="form-phone-4">Số điện thoại</label>
-          <input id="form-phone-4" type="text" name="entry.2080986284" required>
+          <input id="form-phone-4" type="tel" name="phone" required>
         </div>
         <!-- Email input -->
         <div class="form-element form-email-wrap">
           <label for="form-email-4">Email</label>
-          <input id="form-email-4" type="text" name="entry.1852443928">
+          <input id="form-email-4" type="email" name="email">
         </div>
         <div class="form-btn-wrap">
-          <button class="submit-btn" type="submit">Nhận quà</button>
+          <button id="submit-form-4" class="submit-btn" type="submit">Nhận quà</button>
         </div>
       </form>
     </div>
@@ -234,48 +229,85 @@
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
-        <img src="assetsv2/prize-5-modal.png" alt="Prize 1" width="50%">
+        <img src="assetsv2/prize-5-modal.png" alt="Prize 5" width="50%">
       </div>
-      <form
-        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdkEHbIYkXN8CrS3gZ9mW3p_dUFjA8JsGIykim9cBm01ZAy8A/formResponse"
-        method="post">
+      <form id="form-5" method="POST">
         <!-- Name input -->
         <div class="form-element form-name-wrap">
-          <label for="form-name-5">Tên của bạn</label>
-          <input id="form-name-5" type="text" name="entry.191716070">
+          <label for="form-name-5">Tên</label>
+          <input id="form-name-5" type="text" name="name">
         </div>
         <!-- Phone input -->
         <div class="form-element form-phone-wrap">
           <label for="form-phone-5">Số điện thoại</label>
-          <input id="form-phone-5" type="text" name="entry.2080986284" required>
+          <input id="form-phone-5" type="tel" name="phone" required>
         </div>
         <!-- Email input -->
         <div class="form-element form-email-wrap">
           <label for="form-email-5">Email</label>
-          <input id="form-email-5" type="text" name="entry.1852443928">
+          <input id="form-email-5" type="email" name="email">
         </div>
         <div class="form-btn-wrap">
-          <button class="submit-btn" type="submit">Nhận quà</button>
+          <button id="submit-form-5" class="submit-btn" type="submit">Nhận quà</button>
         </div>
       </form>
     </div>
   </div>
 
+  <!-- <form id="form-1" method="POST">
+    <table>
+      <tr>
+        <td><label>Họ tên</label></td>
+        <td><input type="text" name="hoten" placeholder="Họ tên" /></td>
+      </tr>
+      <tr>
+        <td><label>Email</label></td>
+        <td><input type="email" name="email" placeholder="Email" /></td>
+      </tr>
+      <tr>
+        <td><label>Số điện thoại</label></td>
+        <td><input type="text" name="sodt" placeholder="Số điện thoại" /></td>
+      </tr>
+      <tr>
+        <td><label>Địa chỉ</label></td>
+        <td><input type="text" name="diachi" placeholder="Địa chỉ" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit" id="submit-form-1">Gửi 1</button></td>
+      </tr>
+    </table>
+  </form>
+
+  <form id="form-2" method="POST">
+    <table>
+      <tr>
+        <td><label>Họ tên</label></td>
+        <td><input type="text" name="hoten" placeholder="Họ tên" /></td>
+      </tr>
+      <tr>
+        <td><label>Email</label></td>
+        <td><input type="email" name="email" placeholder="Email" /></td>
+      </tr>
+      <tr>
+        <td><label>Số điện thoại</label></td>
+        <td><input type="text" name="sodt" placeholder="Số điện thoại" /></td>
+      </tr>
+      <tr>
+        <td><label>Địa chỉ</label></td>
+        <td><input type="text" name="diachi" placeholder="Địa chỉ" /></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button type="submit" id="submit-form-2">Gửi 2</button></td>
+      </tr>
+    </table>
+  </form> -->
+
   <!-- CUSTOM SCRIPTS -->
   <script src="js/form-handle.js" defer type="module"></script>
   <script src="js/index.js" defer type="module"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <!-- <script>
-    setTimeout(function () {
-      $('#did-vid').fadeOut('fast');
-      $('#meow').fadeIn('fast');
-    }, 13000); // <-- time in milliseconds
 
-    setTimeout(function () {
-      $('#meow').fadeIn('fast');
-    }, 15000); // <-- time in milliseconds
-  </script> -->
-  <!-- Auto play then end video -->
   <script>
     function setupVideo() {
       document.getElementById("play-btn").onclick = function () {
@@ -297,6 +329,7 @@
       })
     }
   </script>
+
 </body>
 
 </html>

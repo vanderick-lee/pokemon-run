@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test sumbit form Google sheet</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <!-- <script src="js/jquery.serialize-object.min.js"></script> -->
+</head>
+<body>
+    <form id="test-form" method="POST">
+        <table>
+            <tr>
+                <td><label>Họ tên</label></td>
+                <td><input type="text" name="hoten" placeholder="Họ tên"/></td>
+            </tr>
+            <tr>            
+                <td><label>Email</label></td>
+                <td><input type="email" name="email" placeholder="Email"/></td>
+            </tr>
+            <tr>
+                <td><label>Số điện thoại</label></td>
+                <td><input type="text" name="sodt" placeholder="Số điện thoại"/></td>
+            </tr>
+            <tr>
+                <td><label>Địa chỉ</label></td>
+                <td><input type="text" name="diachi" placeholder="Địa chỉ"/></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" id="submit-form">Gửi</button></td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        var $form = $('form#test-form'),
+            url = 'https://script.google.com/macros/s/AKfycbzXkEoOp4cLRdKN00s6fKTOO_1jVet0OlXZKvpS1PzAgbW4EEdlZkdprCTN0GVoPHVUjg/exec'
+
+        $('#submit-form').on('click', function(e) {
+              e.preventDefault();
+            var jqxhr = $.ajax({
+                url: url,
+                method: "POST",
+                dataType: "json",
+                data: $form.serialize()
+            }).success(
+                  alert("Gửi form thành công")
+            )
+        })        
+    </script>    
+</body>
+</html>
