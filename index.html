@@ -105,32 +105,37 @@
 
   <!-- MODAL PRIZE -->
   <!-- Level 1 -->
-  <div id="modal-1" class="modal">
+  <div id="modal-1" class="modal" style="display: block;">
     <!-- Modal content -->
     <div class="modal-content">
       <div class="modal-header">
         <img src="assetsv2/prize-1-modal.png" alt="Prize 1" width="50%">
       </div>
-      <form id="form-1" method="POST">
-        <!-- Name input -->
-        <div class="form-element form-name-wrap">
-          <label for="form-name-2">Tên</label>
-          <input id="form-name-2" type="text" name="name">
+      <!-- Link to other shop -->
+      <div class="code-link-container">
+        <div class="code-text">
+          Đây là code của bạn: 
         </div>
-        <!-- Phone input -->
-        <div class="form-element form-phone-wrap">
-          <label for="form-phone-2">Số điện thoại</label>
-          <input id="form-phone-2" type="tel" name="phone" required>
+        <div class="link-wrap">
+          <a href="#">
+            <img src="assetsv2/website-icon.jpg" alt="Website Link">
+          </a>
+          <a href="#">
+            <img src="assetsv2/shopee-icon.png" alt="Shopee Link">
+          </a>
+          <a href="#">
+            <img src="assetsv2/lazada-icon.webp" alt="Lazada Link">
+          </a>
+          <a href="#">
+            <img src="assetsv2/tiktok-icon.png" alt="Tiktok Link">
+          </a>
         </div>
-        <!-- Email input -->
-        <div class="form-element form-email-wrap">
-          <label for="form-email-2">Email</label>
-          <input id="form-email-2" type="email" name="email">
-        </div>
-        <div class="form-btn-wrap">
-          <button id="submit-form-1" class="submit-btn" type="submit">Nhận quà</button>
-        </div>
-      </form>
+      </div>
+      <div class="use-later-wrap">
+        <a href="#">
+          Lưu lại cho lần sau
+        </a>
+      </div>
     </div>
   </div>
 
