@@ -97,12 +97,13 @@ a {
 
 .link-wrap {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
 }
 
 .link-wrap > a {
     width: 15%;
+    margin: 0 15px;
 }
 
 .link-wrap > a > img {
