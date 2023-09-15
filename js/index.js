@@ -7,8 +7,8 @@ const canvas = document.getElementById("game");
 
 const ctx = canvas.getContext("2d");
 
-const GAME_SPEED_START = 0.9; // 1.0
-const GAME_SPEED_INCREMENT = 0.00002;
+const GAME_SPEED_START = 0.5; // 1.0
+const GAME_SPEED_INCREMENT = 0.00003;
 
 const GAME_WIDTH = 800;
 const GAME_HEIGHT = 200;
